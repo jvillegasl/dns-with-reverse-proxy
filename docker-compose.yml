@@ -21,3 +21,9 @@ services:
       - "80:80"
     volumes:
       - ./reverse-proxy:/etc/nginx/conf.d
+
+  test-server:
+    container_name: test-server
+    build: ./test-server
+    ports:
+      - "3000:3000"
